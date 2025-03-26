@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="loading-screen">
+            <h1>Duck Adventure</h1>
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+        <div id="menu" class="hidden">
+            <h1>Duck Adventure</h1>
+            <button id="start-button">Start Game</button>
+            <button id="options-button">Options</button>
+            <div id="options-panel" class="hidden">
+                <h2>Options</h2>
+                <div class="option">
+                    <label for="sound-volume">Sound Volume</label>
+                    <input type="range" id="sound-volume" min="0" max="100" value="50">
+                </div>
+                <button id="back-button">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- Socket.IO for multiplayer -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Game scripts -->
+    <script src="js/terrain.js"></script>
+    <script src="js/duck.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/playerCustomization.js"></script>
+    <script src="js/multiplayer.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
